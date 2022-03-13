@@ -1,0 +1,2 @@
+SELECT COALESCE(comm, 0)
+FROM emp
