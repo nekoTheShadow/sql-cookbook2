@@ -60,3 +60,9 @@ WITH RECURSIVE r (id) AS (SELECT 1 UNION ALL SELECT id + 1 FROM r WHERE id + 1 <
 WITH RECURSIVE r (id) AS (SELECT 1 UNION ALL SELECT id + 1 FROM r WHERE id + 1 <= 10)  INSERT INTO T10  SELECT * FROM r;
 WITH RECURSIVE r (id) AS (SELECT 1 UNION ALL SELECT id + 1 FROM r WHERE id + 1 <= 100) INSERT INTO T100 SELECT * FROM r;
 WITH RECURSIVE r (id) AS (SELECT 1 UNION ALL SELECT id + 1 FROM r WHERE id + 1 <= 500) INSERT INTO T500 SELECT * FROM r;
+
+-- レシピ3.6　他の結合を妨げずにクエリに結合を追加する
+CREATE TABLE emp_bonus (empno INT, received DATE, type INT);
+INSERT INTO emp_bonus(empno, received, type) VALUES (7369, '14-MAR-2015', 1);
+INSERT INTO emp_bonus(empno, received, type) VALUES (7900, '14-MAR-2015', 2);
+INSERT INTO emp_bonus(empno, received, type) VALUES (7788, '14-MAR-2015', 3);
