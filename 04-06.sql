@@ -8,7 +8,7 @@ docker run -d \
   ibmcom/db2:11.5.7.0
 
 docker exec -it <containerid> su - db2inst1
-db2 -t
+db2 -tv
 connect to testdb user db2inst1 using passw0rd;
 **/
 
