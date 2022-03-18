@@ -1,0 +1,7 @@
+SELECT *
+FROM emp
+WHERE empno IN (
+  SELECT CAST(empno AS INT)
+  FROM UNNEST(STRING_TO_ARRAY('7654,7698,7782,7788', ',')) AS T(empno)
+);
+
