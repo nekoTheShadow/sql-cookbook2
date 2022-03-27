@@ -1,0 +1,16 @@
+DROP VIEW IF EXISTS V;
+CREATE VIEW V (id, amt, trx) AS
+            SELECT 1, 100, 'PR'
+  UNION ALL SELECT 2, 100, 'PR'
+  UNION ALL SELECT 3,  50, 'PY'
+  UNION ALL SELECT 4, 100, 'PR'
+  UNION ALL SELECT 5, 200, 'PY'
+  UNION ALL SELECT 6,  50, 'PY';
+  
+SELECT 
+  CASE trx WHEN 'PY' THEN 'PAYMENT'
+           WHEN 'PT' THEN 'PURCHASE' END AS trx_type,
+  amt,
+  SUM(CASE trx WHEN 'PY' THEN -amt
+               WHEN 'PR' THEN  amt END) OVER (ORDER BY id) AS balance
+FROM V;
