@@ -1,0 +1,4 @@
+WITH 
+A AS (SELECT MAX(hiredate) AS mx, MIN(hiredate) AS mn FROM emp),
+B AS (SELECT (EXTRACT(YEAR FROM mx) - EXTRACT(YEAR FROM mn)) * 12 + (EXTRACT(MONTH FROM mx) - EXTRACT(MONTH FROM mn)) AS mnth FROM A)
+SELECT mnth, FLOOR(mnth/12) FROM B
