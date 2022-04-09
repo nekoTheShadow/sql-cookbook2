@@ -1,0 +1,10 @@
+WITH RECURSIVE cal (dy) AS (
+    SELECT DATE_TRUNC('year', CURRENT_TIMESTAMP)
+  UNION ALL
+    SELECT dy + '1 day'
+    FROM cal
+    WHERE EXTRACT(YEAR FROM dy) = EXTRACT(YEAR FROM dy + '1 day')
+)
+SELECT dy  
+FROM cal
+WHERE EXTRACT(dow FROM dy) = 5
