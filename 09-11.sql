@@ -1,0 +1,4 @@
+SELECT *
+FROM emp
+WHERE EXTRACT(MONTH FROM hiredate) IN (2, 12)
+OR EXTRACT(DOW FROM hiredate) = 2
