@@ -1,0 +1,8 @@
+SELECT DISTINCT job FROM emp;
+
+SELECT job
+FROM (
+  SELECT job, ROW_NUMBER() OVER (PARTITION BY job) AS rn\ 
+  FROM emp
+)
+WHERE rn = 1;
