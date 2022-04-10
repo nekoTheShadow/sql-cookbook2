@@ -1,0 +1,6 @@
+SELECT *
+FROM (
+  SELECT *, ROW_NUMBER() OVER (ORDER BY sal) AS rn
+  FROM emp
+) T
+WHERE rn BETWEEN 1 AND 5
