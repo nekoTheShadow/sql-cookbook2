@@ -1,0 +1,11 @@
+SELECT 
+  deptno, 
+  job, 
+  CASE WHEN GROUPING(deptno) = 0 AND GROUPING(job) = 0 THEN 'TOTAL BY DEPT AND JOB'
+       WHEN GROUPING(deptno) = 1 AND GROUPING(job) = 0 THEN 'TOTAL BY JOB'
+       WHEN GROUPING(deptno) = 0 AND GROUPING(job) = 1 THEN 'TOTAL BY DEPT'
+       WHEN GROUPING(deptno) = 1 AND GROUPING(job) = 1 THEN 'TOTAL FOR TABLE' END CATEGORY,
+  SUM(sal)
+FROM emp
+GROUP BY CUBE(deptno, job)
+ORDER BY GROUPING(deptno), GROUPING(job)
