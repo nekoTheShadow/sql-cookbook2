@@ -5,10 +5,6 @@ CREATE TABLE dept (
   dname  VARCHAR(14),
   loc    VARCHAR(13)
 );
-INSERT INTO dept (deptno, dname, loc) VALUES (10, 'ACCOUNTING', 'NEW YORK');
-INSERT INTO dept (deptno, dname, loc) VALUES (20, 'RESEARCH'  , 'DALLAS'  );
-INSERT INTO dept (deptno, dname, loc) VALUES (30, 'SALES'     , 'CHICAGO' );
-INSERT INTO dept (deptno, dname, loc) VALUES (40, 'OPERATIONS', 'BOSTON'  );
 
 CREATE TYPE generic_obj AS OBJECT (
   val1 varchar2(10),
