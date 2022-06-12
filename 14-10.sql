@@ -1,3 +1,4 @@
+-- Oracle
 /**
 CREATE TABLE dept (
   deptno INT,

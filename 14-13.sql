@@ -1,3 +1,4 @@
+-- Oracle
 DROP VIEW V;
 CREATE VIEW V (student_id, test_id, grade_id, period_id, test_date, pass_fail) AS
             SELECT 1, 1, 2, 1, TO_DATE('02/01/2020','MM/DD/YYYY'), 0 FROM DUAL

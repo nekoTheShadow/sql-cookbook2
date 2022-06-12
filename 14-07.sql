@@ -1,4 +1,4 @@
-
+-- Oracle
 /**
 CREATE TABLE emp (
   empno    INT,

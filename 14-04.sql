@@ -1,3 +1,4 @@
+-- Oracle
 WITH T (val) AS (
             SELECT 'xxxxxabc[867]xxx[-]xxxx[5309]xxxxx' FROM DUAL
   UNION ALL SELECT 'xxxxxtime:[11271978]favnum:[4]id:[Joe]xxxxx'FROM DUAL

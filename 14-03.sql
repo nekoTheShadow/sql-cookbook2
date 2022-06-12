@@ -1,3 +1,4 @@
+-- Oracle
 SELECT MAX(d10) AS d10, MAX(d20) AS d20, MAX(d30) AS d30
 FROM (
   SELECT *

@@ -1,3 +1,4 @@
+-- Oracle
 WITH T (val) AS (
             SELECT 'entry:stewiegriffin:lois:brian:' FROM DUAL
   UNION ALL SELECT 'entry:moe::sizlack:' FROM DUAL

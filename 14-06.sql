@@ -1,3 +1,4 @@
+-- Oracle
 WITH T (strings) AS (
             SELECT '1010 switch' FROM DUAL
   UNION ALL SELECT '333' FROM DUAL

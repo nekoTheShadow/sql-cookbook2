@@ -1,12 +1,3 @@
-/**
-docker run --rm -d \
-  -p 5432:5432 \
-  -e POSTGRES_USER=testuser \
-  -e POSTGRES_PASSWORD=passw0rd \
-  -e POSTGRES_DB=testdb \
-  postgres:14
-**/
-
 DROP TABLE IF EXISTS emp;
 DROP TABLE IF EXISTS dept;
 DROP TABLE IF EXISTS T1;

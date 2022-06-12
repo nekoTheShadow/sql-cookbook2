@@ -1,3 +1,4 @@
+-- Oracle
 /**
 CREATE TABLE IT_RESEARCH (deptno NUMBER, ename VARCHAR2(20));
 CREATE TABLE IT_APPS (deptno NUMBER, ename VARCHAR2(20));

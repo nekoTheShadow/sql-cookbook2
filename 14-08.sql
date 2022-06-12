@@ -1,3 +1,4 @@
+-- Oracle
 WITH 
 A AS (
   SELECT ename, sal, DENSE_RANK() OVER (ORDER BY sal DESC) DR
